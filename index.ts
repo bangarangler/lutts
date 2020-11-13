@@ -11,3 +11,13 @@ enum Job {
 const job: Job = Job.WebDev;
 const phone: any = "Pixel";
 const tablet: any = 3;
+
+// functions in Typescript
+
+const sayWord = (word: string): string => {
+  console.log(word);
+  return word;
+};
+
+sayWord("Jon");
+// sayWord(3);
