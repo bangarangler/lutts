@@ -32,4 +32,13 @@ const sayWord = (word = "Hello", ...otherStuff: string[]): string => {
   return word;
 };
 
-sayWord("scott", "wes");
+sayWord("jack", "jill");
+
+// implicit types in TS
+let newName = "Jack";
+newName = "Jill";
+// newName = 10;
+console.log(newName);
+
+let newNameTwo = newName;
+// newNameTwo = 10;
