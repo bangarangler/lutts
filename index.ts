@@ -14,10 +14,22 @@ const tablet: any = 3;
 
 // functions in Typescript
 
-const sayWord = (word: string): string => {
+// const sayWord = (word?: string): string => {
+//   console.log(word || "Hello");
+//   return word || "Hello";
+// };
+
+// sayWord("Jon");
+// // Optional Params
+// // const sayWord = (word?: string): string
+// sayWord();
+// sayWord(3);
+
+// Default Params
+const sayWord = (word = "Hello", ...otherStuff: string[]): string => {
   console.log(word);
+  console.log(otherStuff);
   return word;
 };
 
-sayWord("Jon");
-// sayWord(3);
+sayWord("scott", "wes");
