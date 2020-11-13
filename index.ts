@@ -63,3 +63,20 @@ dog = null;
 dog = undefined;
 // dog = 9
 // dog = false
+
+// Interface
+interface Person {
+  name: string;
+  // optional param
+  age?: number;
+}
+const sayN = ({ name, age }: Person): Person => {
+  console.log(name);
+  return { name, age };
+};
+
+sayN({ name: "Jon", age: 45 });
+sayN({ name: "Jon" });
+// order or params mater
+// sayN(45, "Jon")
+// sayN(45)
