@@ -42,3 +42,24 @@ console.log(newName);
 
 let newNameTwo = newName;
 // newNameTwo = 10;
+
+// Union Types with "pipe" |
+// let newNameThree: string | number | boolean = 'jenny'
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}px`;
+};
+
+makeMargin(10);
+makeMargin("10");
+// makeMargin(false);
+
+// Null Types
+
+let dog: string | undefined = "Sammy";
+dog = null;
+console.log("dog :>> ", dog);
+dog = "Lucie";
+dog = null;
+dog = undefined;
+// dog = 9
+// dog = false
