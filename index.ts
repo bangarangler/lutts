@@ -104,3 +104,26 @@ enum Type2 {
 const createContent2 = (contentType: Type2) => {};
 createContent2(Type2.Quiz);
 console.log(Type2.Quiz);
+
+// CLASSES
+class Team {
+  // teamName: string same as public
+  public teamName: string;
+  // private teamName: string; prevents outside usage
+  // private teamName: string;
+  // prevents from being changed
+  // readonly teamName: string;
+  constructor(teamName) {
+    this.teamName = teamName;
+  }
+  score(): string {
+    // errors if using readonly
+    // this.teamName = "changing"
+    console.log(this.teamName);
+    return "goal!";
+  }
+}
+
+const redWings = new Team("Red Wings");
+redWings.score();
+redWings.teamName;
