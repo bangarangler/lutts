@@ -131,9 +131,28 @@ const redWings = new Team("Red Wings");
 redWings.score();
 redWings.teamName;
 
-const outputInput = (arg: string): string => {
-  return "nothi";
+// GENERIC TYPE || GENERICS
+const outputInput = <T>(arg: T): T => {
+  return arg;
 };
+
+const output = outputInput("hi");
 
 outputInput("hi");
 outputInput(3);
+
+// DUCK TYPING
+class Dancer implements Person {
+  name: string;
+  age?: number;
+}
+
+let ElNino: Person = new Dancer();
+
+const fake = {
+  name: "Jon",
+  // names: "Jon",
+  year: 30,
+};
+
+ElNino = fake;
