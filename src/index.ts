@@ -131,4 +131,9 @@ const redWings = new Team("Red Wings");
 redWings.score();
 redWings.teamName;
 
-// MODULES
+const outputInput = (arg: string): string => {
+  return "nothi";
+};
+
+outputInput("hi");
+outputInput(3);
