@@ -80,3 +80,27 @@ sayN({ name: "Jon" });
 // order or params mater
 // sayN(45, "Jon")
 // sayN(45)
+
+// ENUMS
+enum Type {
+  Video, // 0
+  BlogPost, // 1
+  Quiz, // 2
+}
+
+const createContent = (contentType: Type) => {};
+createContent(Type.Quiz);
+createContent(0);
+createContent(2);
+// createContent('Video')
+console.log(Type.Quiz);
+
+// STRING ENUM
+enum Type2 {
+  Video = "VIDEO",
+  BlogPost = "BLOG_POST",
+  Quiz = "QUIZ",
+}
+const createContent2 = (contentType: Type2) => {};
+createContent2(Type2.Quiz);
+console.log(Type2.Quiz);
