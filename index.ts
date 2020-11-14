@@ -1,13 +1,16 @@
+import { Person } from "./src/interfaces";
+import { Job, Type, Type2 } from "./src/enums";
+
 const isOpen: boolean = false;
 const myName: string = "Scott";
 const myAge: number = 32.04;
 const list: number[] = [0, 1, 2];
 const me: [string, number, boolean] = ["Jon", 32, false];
-enum Job {
-  WebDev,
-  WebDesigner,
-  PM,
-}
+// enum Job {
+//   WebDev,
+//   WebDesigner,
+//   PM,
+// }
 const job: Job = Job.WebDev;
 const phone: any = "Pixel";
 const tablet: any = 3;
@@ -65,11 +68,11 @@ dog = undefined;
 // dog = false
 
 // Interface
-interface Person {
-  name: string;
-  // optional param
-  age?: number;
-}
+// interface Person {
+//   name: string;
+//   // optional param
+//   age?: number;
+// }
 const sayN = ({ name, age }: Person): Person => {
   console.log(name);
   return { name, age };
@@ -82,11 +85,11 @@ sayN({ name: "Jon" });
 // sayN(45)
 
 // ENUMS
-enum Type {
-  Video, // 0
-  BlogPost, // 1
-  Quiz, // 2
-}
+// enum Type {
+//   Video, // 0
+//   BlogPost, // 1
+//   Quiz, // 2
+// }
 
 const createContent = (contentType: Type) => {};
 createContent(Type.Quiz);
@@ -96,11 +99,11 @@ createContent(2);
 console.log(Type.Quiz);
 
 // STRING ENUM
-enum Type2 {
-  Video = "VIDEO",
-  BlogPost = "BLOG_POST",
-  Quiz = "QUIZ",
-}
+// enum Type2 {
+//   Video = "VIDEO",
+//   BlogPost = "BLOG_POST",
+//   Quiz = "QUIZ",
+// }
 const createContent2 = (contentType: Type2) => {};
 createContent2(Type2.Quiz);
 console.log(Type2.Quiz);
@@ -127,3 +130,5 @@ class Team {
 const redWings = new Team("Red Wings");
 redWings.score();
 redWings.teamName;
+
+// MODULES
